@@ -1,0 +1,60 @@
+---
+import Base from "../layouts/Base.astro";
+import Event from "../components/Event.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const allEvents = await getCollection("events");
+    const cities = [...new Set(allEvents.map((e) => e.data.city))].sort();
+
+    return cities.map((city) => {
+        const events = allEvents
+            .filter(
+                (e) =>
+                    e.data.city === city &&
+                    e.data.date >=
+                        new Date(Date.now()).toISOString().split("T")[0],
+            )
+            .sort(
+                (a, b) =>
+                    parseInt(a.data.date.replaceAll("-", "")) -
+                    parseInt(b.data.date.replaceAll("-", "")),
+            );
+        return {
+            params: { city: city.toLowerCase() },
+            props: { cityName: city, events },
+        };
+    });
+}
+
+const { cityName, events } = Astro.props;
+---
+
+<Base city={cityName}>
+    {
+        events.length === 0 ? (
+            <p>No upcoming events.</p>
+        ) : (
+            <div class="events">
+                {events.map((event) => (
+                    <Event
+                        title={event.data.title}
+                        description={event.data.description}
+                        venue={event.data.venue}
+                        ticket_link={event.data.link}
+                        image={event.data.image_url}
+                        date={event.data.date}
+                    />
+                ))}
+            </div>
+        )
+    }
+</Base>
+
+<style>
+    .events {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    }
+</style>

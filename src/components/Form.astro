@@ -1,0 +1,117 @@
+---
+import { getCollection } from "astro:content";
+
+const formspree_url = "https://formspree.io/f/mrewwwon";
+
+const events = await getCollection("events");
+const cities = [...new Set(events.map((e) => e.data.city))].sort();
+
+const currentDate = new Date(Date.now()).toISOString().split("T")[0];
+---
+
+<form action={formspree_url} method="POST" enctype="multipart/form-data">
+    <label for="city">
+        City
+        <select name="city" id="city" required>
+            <option value="">Select City...</option>
+            {cities.map((city) => <option value={city}>{city}</option>)}
+        </select>
+    </label>
+
+    <label for="title">
+        Title
+        <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Headliner or fest name..."
+            required
+        />
+    </label>
+
+    <label for="date">
+        Date
+        <input type="date" id="date" name="date" min={currentDate} required />
+    </label>
+
+    <label for="venue">
+        Venue
+        <input
+            type="text"
+            id="venue"
+            name="venue"
+            placeholder="Venue..."
+            required
+        />
+    </label>
+
+    <label for="ticket_link">
+        Ticket Link
+        <input
+            type="url"
+            id="ticket_link"
+            name="ticket_link"
+            placeholder="e.g. https://promoter.bigcartel.com/event"
+            required
+        />
+    </label>
+
+    <p>If your city is missing, email <strong>ukhcevents@proton.me</strong>.</p>
+
+    <label for="image" class="button file-upload">
+        Upload Flyer
+        <input type="file" id="image" name="image" accept="image/*" required />
+    </label>
+
+    <button type="submit" class="button">Submit</button>
+</form>
+
+<style>
+    form {
+        width: min(50rem, 100%);
+        padding: 1rem;
+        margin-top: 1rem;
+        border: 1px solid var(--bg1);
+        border-radius: var(--border-radius);
+    }
+
+    form *:focus {
+        outline: none;
+        border-color: var(--primary-accent);
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input,
+    select {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0.6em 0.75rem;
+        background-color: var(--bg1);
+        color: var(--fg0);
+        border: 1px solid var(--bg0);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .image-upload {
+        display: block;
+        border: 1px solid var(--fg0);
+        padding: 0.6em 0.75rem;
+        margin: 1rem 0;
+        cursor: pointer;
+    }
+
+    .file-upload {
+        display: block;
+        margin: 1rem 0;
+        font-weight: normal;
+        width: 126px;
+    }
+</style>

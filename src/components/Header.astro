@@ -1,0 +1,128 @@
+---
+
+---
+
+<header>
+    <h1><a href="/">UKHC Events</a></h1>
+    <div class="buttons">
+        <a id="search" href="/search">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="main-grid-item-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+            >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+            </svg>
+        </a>
+        <button id="theme-switch"
+            ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="main-grid-item-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+            >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" x2="12" y1="1" y2="3"></line>
+                <line x1="12" x2="12" y1="21" y2="23"></line>
+                <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+                <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+                <line x1="1" x2="3" y1="12" y2="12"></line>
+                <line x1="21" x2="23" y1="12" y2="12"></line>
+                <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+                <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg
+            ></button
+        >
+        <button id="hamburger" aria-expanded="false"
+            ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="main-grid-item-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+            >
+                <line id="middle-line" x1="3" x2="21" y1="12" y2="12"></line>
+                <line id="top-line" x1="3" x2="21" y1="6" y2="6"></line>
+                <line id="bottom-line" x1="3" x2="21" y1="18" y2="18"></line>
+            </svg></button
+        >
+    </div>
+</header>
+
+<style>
+    header {
+        background-color: var(--bg1);
+        padding: 0.7ex 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #hamburger:hover,
+    #theme-switch:hover,
+    #search:hover {
+        opacity: 0.7;
+        color: var(--primary-accent);
+    }
+
+    #hamburger,
+    #theme-switch,
+    #search {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--fg0);
+    }
+
+    .buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        #hamburger {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    // Theme switcher
+    const themeToggle = document.getElementById("theme-switch");
+    const root = document.documentElement;
+
+    themeToggle?.addEventListener("click", () => {
+        root.classList.toggle("light");
+        const theme = root.classList.contains("light") ? "light" : "dark";
+        localStorage.setItem("theme", theme);
+    });
+
+    // const retrievedTheme = localStorage.getItem("theme");
+    // if (retrievedTheme === "light") {
+    //     root.classList.add("light");
+    // }
+</script>

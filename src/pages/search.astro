@@ -1,0 +1,132 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Event from "../components/Event.astro";
+
+const allEvents = await getCollection("events");
+const events = allEvents
+    .filter(
+        (e) => e.data.date >= new Date(Date.now()).toISOString().split("T")[0],
+    )
+    .sort(
+        (a, b) =>
+            parseInt(a.data.date.replaceAll("-", "")) -
+            parseInt(b.data.date.replaceAll("-", "")),
+    );
+
+function formatDate(dateStr) {
+    return new Date(dateStr).toLocaleDateString("en-GB", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+    });
+}
+---
+
+<Base city="Search">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by band, venue, city, or date..."
+        autocomplete="off"
+    />
+
+    <p id="noResults" style="display: none;">No results.</p>
+
+    <div class="events">
+        {
+            events.map((event) => (
+                <div
+                    class="event-wrapper"
+                    data-title={event.data.title}
+                    data-description={event.data.description}
+                    data-venue={event.data.venue}
+                    data-city={event.data.city}
+                    data-date={event.data.date}
+                    data-formatted-date={formatDate(event.data.date)}
+                >
+                    <Event
+                        title={event.data.title}
+                        description={event.data.description}
+                        venue={event.data.venue}
+                        ticket_link={event.data.link}
+                        image={event.data.image_url}
+                        date={event.data.date}
+                    />
+                </div>
+            ))
+        }
+    </div>
+</Base>
+
+<script>
+    const input = document.getElementById("searchInput");
+    const wrappers = document.querySelectorAll(".event-wrapper");
+    const noResults = document.getElementById("noResults");
+
+    function normalize(str: String) {
+        return str.toLowerCase().trim();
+    }
+
+    function filter() {
+        const query = normalize(input.value);
+        let visibleCount = 0;
+
+        wrappers.forEach((wrapper) => {
+            const haystack = normalize(
+                wrapper.dataset.title +
+                    " " +
+                    wrapper.dataset.description +
+                    " " +
+                    wrapper.dataset.venue +
+                    " " +
+                    wrapper.dataset.city +
+                    " " +
+                    wrapper.dataset.date +
+                    " " +
+                    wrapper.dataset.formattedDate,
+            );
+
+            const match = !query || haystack.includes(query);
+            wrapper.style.display = match ? "" : "none";
+            if (match) visibleCount++;
+        });
+
+        noResults.style.display = visibleCount === 0 ? "" : "none";
+    }
+
+    input.addEventListener("input", filter);
+</script>
+
+<style>
+    #searchInput {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border: 1px solid var(--bg0);
+        border-radius: var(--border-radius);
+        background-color: var(--bg1);
+        color: var(--fg0);
+    }
+
+    #searchInput:focus {
+        outline: none;
+        border-color: var(--primary-accent);
+    }
+
+    .events {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    }
+
+    .event-wrapper {
+        display: contents;
+    }
+
+    .event-wrapper[style*="none"] {
+        display: none;
+    }
+</style>

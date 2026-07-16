@@ -1,0 +1,119 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+    title: string;
+    description: string;
+    venue: string;
+    ticket_link: string;
+    image: string;
+    date: string;
+}
+
+const { title, description, venue, ticket_link, image, date } = Astro.props;
+const formattedDate = new Date(date).toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+});
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/*.webp",
+);
+if (!images[image])
+    throw new Error(`"${image}" does not exist in glob: "src/assets/*.webp"`);
+
+const hasTicketUrl =
+    ticket_link && ticket_link !== "Free" && ticket_link !== "Doors";
+---
+
+{
+    hasTicketUrl ? (
+        <a class="event" href={ticket_link} target="_blank">
+            <div class="image-container">
+                <Image
+                    src={images[image]()}
+                    alt={`flyer for ${title}`}
+                    height="250"
+                    loading="eager"
+                />
+            </div>
+            <h2 class="title">{title}</h2>
+            <strong>{formattedDate}</strong>
+            <p>{description}</p>
+            <p>
+                <strong>Venue: </strong> {venue}
+            </p>
+            <p>Click for tickets.</p>
+        </a>
+    ) : (
+        <div class="event">
+            <div class="image-container">
+                <Image
+                    src={images[image]()}
+                    alt={`flyer for ${title}`}
+                    height="250"
+                    loading="eager"
+                />
+            </div>
+            <h2 class="title">{title}</h2>
+            <strong>{formattedDate}</strong>
+            <p>{description}</p>
+            <p>
+                <strong>Venue: </strong> {venue}
+            </p>
+            <p class="highlight">
+                {!ticket_link
+                    ? "No ticket information available."
+                    : ticket_link === "Free"
+                      ? "Tickets: Free."
+                      : "Tickets on the door."}
+            </p>
+        </div>
+    )
+}
+<style>
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    .event {
+        padding: 1rem;
+        margin: 1rem;
+        border: 1px solid var(--bg1);
+        border-radius: var(--event-radius);
+        transition: border-color 0.2s ease;
+    }
+
+    a.event:hover {
+        border-color: var(--primary-accent);
+    }
+
+    div.event:hover {
+        border-color: var(--secondary-accent);
+    }
+
+    .highlight:hover {
+        color: var(--secondary-accent);
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    img {
+        background-color: var(--bg1);
+        border-radius: var(--event-radius);
+        border: 1px solid var(--bg1);
+    }
+
+    h2 {
+        color: var(--primary-accent);
+    }
+</style>

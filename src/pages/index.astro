@@ -1,17 +1,36 @@
 ---
-
+import Base from "../layouts/Base.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base city="">
+	<h1>About This Website</h1>
+	<p>
+		This website was built to stay up to date with shows, without relying on
+		social media. It's built by the community, for the community, so feel
+		free to contribute by adding shows in your scene.
+	</p>
+	<p>
+		View events in your city using the sidebar, or <a href="/search"
+			>search</a
+		> all events.
+	</p>
+
+	<h2>Contribute</h2>
+	<p>Something missing? Add it!</p>
+	<a class="button" href="/add">Submit Event</a>
+
+	<h2>Contact</h2>
+	<p>
+		Any questions, feel free to contact
+		<strong>ukhcevents@proton.me</strong>
+	</p>
+
+	<h3>RSS Feeds</h3>
+	<p>
+		Each page is also an RSS feed. You can paste the URL into a
+		<a href="https://aboutfeeds.com" target="_blank">feed reader</a> to stay up
+		to date when new events are added for your city. You can also subscribe to
+		the RSS feed for the entire site using
+		<a href="/">the home page</a>.
+	</p>
+</Base>

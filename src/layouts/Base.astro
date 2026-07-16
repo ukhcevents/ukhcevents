@@ -1,0 +1,51 @@
+---
+import "../styles/style.css";
+import Header from "../components/Header.astro";
+import Navigation from "../components/Navigation.astro";
+
+interface Props {
+    city: string;
+}
+
+const { city } = Astro.props;
+---
+
+<html>
+    <head>
+        <title>{city ? `${city} - UKHC Events` : "UKHC Events"}</title>
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Feed - UKHC Events"
+            href={city && city != "Add Event" && city != "Search"
+                ? `${city.toLowerCase()}/rss.xml`
+                : "/rss.xml"}
+        />
+        <script is:inline>
+            const retrievedTheme = localStorage.getItem("theme");
+            if (retrievedTheme === "light") {
+                document.documentElement.classList.add("light");
+            }
+        </script>
+    </head>
+    <body>
+        <Header />
+        <div class="content">
+            <Navigation city={city} />
+            <div class="main">
+                <slot />
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    .content {
+        display: flex;
+    }
+
+    .main {
+        padding: 0 1.5rem;
+        flex: 1;
+    }
+</style>
