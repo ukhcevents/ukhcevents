@@ -18,7 +18,6 @@ pnpm-debug.log*
 .env.production
 
 # other
-src/assets/
 .vscode/
 formspree_export.json
 db-to-json.py
