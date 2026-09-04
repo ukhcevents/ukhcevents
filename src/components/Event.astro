@@ -3,6 +3,7 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
 interface Props {
+    city?: string;
     title: string;
     description: string;
     venue: string;
@@ -11,7 +12,8 @@ interface Props {
     date: string;
 }
 
-const { title, description, venue, ticket_link, image, date } = Astro.props;
+const { city, title, description, venue, ticket_link, image, date } =
+    Astro.props;
 const formattedDate = new Date(date).toLocaleDateString("en-GB", {
     weekday: "long",
     day: "numeric",
@@ -44,6 +46,7 @@ const hasTicketUrl =
             <p>{description}</p>
             <p>
                 <strong>Venue: </strong> {venue}
+                {city ? `, ${city}` : ""}
             </p>
             <p>Click for tickets.</p>
         </a>
@@ -62,13 +65,16 @@ const hasTicketUrl =
             <p>{description}</p>
             <p>
                 <strong>Venue: </strong> {venue}
+                {city ? `, ${city}` : ""}
             </p>
             <p class="highlight">
-                {!ticket_link
-                    ? "No ticket information available."
-                    : ticket_link === "Free"
-                      ? "Tickets: Free."
-                      : "Tickets on the door."}
+                {!ticket_link ? (
+                    "No ticket information available."
+                ) : ticket_link === "Free" ? (
+                    <span class="free">Free show.</span>
+                ) : (
+                    <span class="doors">Tickets on the door.</span>
+                )}
             </p>
         </div>
     )
@@ -88,16 +94,16 @@ const hasTicketUrl =
         transition: border-color 0.2s ease;
     }
 
-    a.event:hover {
+    .event:hover {
         border-color: var(--primary-accent);
     }
 
-    div.event:hover {
-        border-color: var(--secondary-accent);
+    .free {
+        color: var(--secondary-accent);
     }
 
-    .highlight:hover {
-        color: var(--secondary-accent);
+    .doors {
+        color: var(--tertiary-accent);
     }
 
     .image-container {

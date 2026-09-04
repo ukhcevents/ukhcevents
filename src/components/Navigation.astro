@@ -101,19 +101,27 @@ const { city } = Astro.props;
         );
         // change the hamburger to a cross and back
         if (navSidebar?.classList.contains("open")) {
-            topLine?.setAttribute("y1", "3");
-            topLine?.setAttribute("y2", "21");
+            topLine?.setAttribute("x1", "18");
+            topLine?.setAttribute("y1", "6");
+            topLine?.setAttribute("x2", "6");
+            topLine?.setAttribute("y2", "18");
 
-            bottomLine?.setAttribute("y1", "21");
-            bottomLine?.setAttribute("y2", "3");
+            bottomLine?.setAttribute("x1", "18");
+            bottomLine?.setAttribute("y1", "18");
+            bottomLine?.setAttribute("x2", "6");
+            bottomLine?.setAttribute("y2", "6");
 
             middleLine?.setAttribute("stroke-width", "0");
         } else {
+            topLine?.setAttribute("x1", "3");
             topLine?.setAttribute("y1", "6");
+            topLine?.setAttribute("x2", "21");
             topLine?.setAttribute("y2", "6");
 
             bottomLine?.setAttribute("y1", "18");
+            bottomLine?.setAttribute("x1", "3");
             bottomLine?.setAttribute("y2", "18");
+            bottomLine?.setAttribute("x2", "21");
 
             middleLine?.setAttribute("stroke-width", "2");
         }

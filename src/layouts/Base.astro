@@ -18,7 +18,7 @@ const { city } = Astro.props;
             type="application/rss+xml"
             title="Feed - UKHC Events"
             href={city && city != "Add Event" && city != "Search"
-                ? `${city.toLowerCase()}/rss.xml`
+                ? `/${city.toLowerCase()}/rss.xml`
                 : "/rss.xml"}
         />
         <script is:inline>

@@ -9,7 +9,12 @@ const cities = [...new Set(events.map((e) => e.data.city))].sort();
 const currentDate = new Date(Date.now()).toISOString().split("T")[0];
 ---
 
-<form action={formspree_url} method="POST" enctype="multipart/form-data">
+<form
+    action={formspree_url}
+    method="POST"
+    accept-charset="utf-8"
+    enctype="multipart/form-data"
+>
     <label for="city">
         City
         <select name="city" id="city" required>
@@ -45,26 +50,76 @@ const currentDate = new Date(Date.now()).toISOString().split("T")[0];
         />
     </label>
 
-    <label for="ticket_link">
-        Ticket Link
-        <input
-            type="url"
-            id="ticket_link"
-            name="ticket_link"
-            placeholder="e.g. https://promoter.bigcartel.com/event"
-            required
-        />
-    </label>
+    <fieldset>
+        <legend>Tickets</legend>
+        <div class="radio-item">
+            <input type="radio" name="source" id="free" value="free" />
+            <label class="source" for="free">Free show</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="source" id="doors" value="doors" />
+            <label class="source" for="doors">Tickets on the door</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="source" id="link" value="link" />
+            <input
+                type="url"
+                id="ticket_link"
+                name="ticket_link"
+                placeholder="Ticket link e.g. https://promoter.bigcartel.com/event"
+                disabled
+            />
+        </div>
+    </fieldset>
 
-    <p>If your city is missing, email <strong>ukhcevents@proton.me</strong>.</p>
+    <input type="hidden" name="link" id="final-link" />
 
-    <label for="image" class="button file-upload">
+    <label for="image" class="file-upload">
         Upload Flyer
         <input type="file" id="image" name="image" accept="image/*" required />
     </label>
 
+    <p>If your city is missing, email <strong>ukhcevents@proton.me</strong>.</p>
+
     <button type="submit" class="button">Submit</button>
 </form>
+
+<script>
+    // handle radio logic
+    document.addEventListener("DOMContentLoaded", () => {
+        const freeRadio = document.getElementById("free");
+        const doorsRadio = document.getElementById("doors");
+        const linkRadio = document.getElementById("link");
+        const ticketLinkInput = document.getElementById("ticket_link");
+        const finalLinkField = document.getElementById("final-link");
+
+        function updateLinkValue() {
+            if (freeRadio?.checked) {
+                finalLinkField.value = "Free";
+                ticketLinkInput.disabled = true;
+                ticketLinkInput.required = false;
+            } else if (doorsRadio?.checked) {
+                finalLinkField.value = "Doors";
+                ticketLinkInput.disabled = true;
+                ticketLinkInput.required = false;
+            } else if (linkRadio?.checked) {
+                finalLinkField.value = ticketLinkInput.value;
+                ticketLinkInput.disabled = false;
+                ticketLinkInput.required = true;
+            }
+        }
+
+        freeRadio?.addEventListener("change", updateLinkValue);
+        doorsRadio?.addEventListener("change", updateLinkValue);
+        linkRadio?.addEventListener("change", updateLinkValue);
+
+        ticketLinkInput?.addEventListener("input", () => {
+            if (linkRadio.checked) {
+                finalLinkField.value = ticketLinkInput.value;
+            }
+        });
+    });
+</script>
 
 <style>
     form {
@@ -80,8 +135,13 @@ const currentDate = new Date(Date.now()).toISOString().split("T")[0];
         border-color: var(--primary-accent);
     }
 
-    label {
+    label,
+    legend {
         font-weight: bold;
+    }
+
+    legend {
+        padding: 0 0.5rem;
     }
 
     input,
@@ -96,22 +156,52 @@ const currentDate = new Date(Date.now()).toISOString().split("T")[0];
         font-size: 1rem;
     }
 
-    input[type="file"] {
-        display: none;
+    fieldset {
+        border: 1px solid var(--bg1);
     }
 
-    .image-upload {
+    /* input[type="file"] {
+        display: none;
+    } */
+
+    input[type="date"] {
+        font-family: inherit;
+    }
+
+    .note,
+    .source {
+        font-weight: normal;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    .radio-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .radio-item * {
+        width: auto;
+    }
+
+    .radio-item input[type="url"] {
+        width: 100%;
+    }
+
+    /* .image-upload {
         display: block;
         border: 1px solid var(--fg0);
         padding: 0.6em 0.75rem;
         margin: 1rem 0;
         cursor: pointer;
-    }
+    } */
 
     .file-upload {
         display: block;
         margin: 1rem 0;
-        font-weight: normal;
-        width: 126px;
     }
 </style>

@@ -3,9 +3,9 @@
 ---
 
 <header>
-    <h1><a href="/">UKHC Events</a></h1>
+    <span><a href="/">UKHC Events</a></span>
     <div class="buttons">
-        <a id="search" href="/search">
+        <a id="search" href="/search" aria-label="search">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -20,6 +20,23 @@
             >
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+            </svg>
+        </a>
+        <a id="add" href="/add" aria-label="add event">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="main-grid-item-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+            >
+                <line x1="12" x2="12" y1="5" y2="19"></line>
+                <line x1="5" x2="19" y1="12" y2="12"></line>
             </svg>
         </a>
         <button id="theme-switch"
@@ -76,22 +93,24 @@
         align-items: center;
         position: sticky;
         top: 0;
+        height: 3.75rem;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 800;
     }
 
     #hamburger {
         display: none;
     }
 
-    #hamburger:hover,
-    #theme-switch:hover,
-    #search:hover {
+    .buttons > *:hover {
         opacity: 0.7;
         color: var(--primary-accent);
     }
 
-    #hamburger,
-    #theme-switch,
-    #search {
+    .buttons > * {
         background: none;
         border: none;
         cursor: pointer;

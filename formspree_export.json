@@ -1,0 +1,40 @@
+{
+    "fields": [
+        "doesn't",
+        "matter",
+        "what",
+        "fields",
+        "there",
+        "are"
+    ],
+    "submissions": [
+        {
+            "city": "Wolverhampton",
+            "title": "Merauder",
+            "date": "2027-01-01",
+            "venue": "The Clarendon Arms",
+            "source": "link",
+            "description": "Support from A Band, Another Band and The Band.",
+            "ticket_link": "wvhcshows.bigcartel.com",
+            "link": "whvcshows.bigcartel.com"
+        },
+        {
+            "city": "Wolverhampton",
+            "title": "Merauder",
+            "date": "2027-01-02",
+            "venue": "The Clarendon Arms",
+            "source": "Doors",
+            "description": "Support from A Band, Another Band and The Band.",
+            "link": "Doors"
+        },
+        {
+            "city": "Wolverhampton",
+            "title": "Merauder",
+            "date": "2027-01-03",
+            "venue": "The Clarendon Arms",
+            "source": "Free",
+            "description": "Support from A Band, Another Band and The Band.",
+            "link": "Free"
+        }
+    ]
+}

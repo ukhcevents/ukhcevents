@@ -6,14 +6,16 @@
 }
 
 :root {
-    --bg0: #111;
-    --bg1: #242424;
-    --fg0: #ffffff;
-    --primary-accent: #99c1f1;
-    --secondary-accent: green;
+    --bg0: #1e1e2e;
+    --bg1: #11111b;
+    --fg0: #cdd6f4;
+    --primary-accent: #89b4fa;
+    --secondary-accent: #a6e3a1;
+    --tertiary-accent: #fab387;
 
-    /* common properties */
     --border-radius: 3px;
+    /* --button-radius: 3.40282e38px; */
+    --button-radius: 6px;
     --event-radius: 8px;
 }
 
@@ -22,13 +24,16 @@
     --bg1: #dce0e8;
     --fg0: #4c4f69;
     --primary-accent: #1e66f5;
+    --secondary-accent: #40a02b;
+    --tertiary-accent: #fe640b;
 }
 
 body {
     margin: 0;
     background-color: var(--bg0);
     color: var(--fg0);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 24px;
 }
 
 a {
@@ -54,7 +59,7 @@ h2 {
     border: 1px solid var(--primary-accent);
     padding: 0.55em 0.9rem;
     font-size: 1rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--button-radius);
     cursor: pointer;
     display: inline-block;
 }
