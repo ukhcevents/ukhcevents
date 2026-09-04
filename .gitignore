@@ -18,6 +18,7 @@ pnpm-debug.log*
 .env.production
 
 # other
+.vscode/
 formspree_export.json
 db-to-json.py
 sync_events.py
