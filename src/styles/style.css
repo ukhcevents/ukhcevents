@@ -6,15 +6,14 @@
 }
 
 :root {
-    --bg0: #1e1e2e;
-    --bg1: #11111b;
-    --fg0: #cdd6f4;
+    --bg0: #111;
+    --bg1: #242424;
+    --fg0: #ffffff;
     --primary-accent: #89b4fa;
     --secondary-accent: #a6e3a1;
     --tertiary-accent: #fab387;
 
     --border-radius: 3px;
-    /* --button-radius: 3.40282e38px; */
     --button-radius: 6px;
     --event-radius: 8px;
 }

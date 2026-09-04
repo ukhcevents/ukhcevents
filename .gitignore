@@ -16,3 +16,8 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+
+# other
+formspree_export.json
+db-to-json.py
+sync_events.py
