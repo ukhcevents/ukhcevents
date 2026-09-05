@@ -62,3 +62,28 @@ h2 {
     cursor: pointer;
     display: inline-block;
 }
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        left: 0;
+        top: 73px;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--bg0);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    ul {
+        width: 100%;
+    }
+
+    nav.open {
+        transform: translateX(0);
+    }
+
+    #hamburger {
+        display: block;
+    }
+}
