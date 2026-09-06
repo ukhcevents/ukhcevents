@@ -4,6 +4,11 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   push:
     branches: [ main ]
+
+  # trigger nightly to update min date of form
+  schedule:
+    - cron: '0 1 * * *'
+
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
