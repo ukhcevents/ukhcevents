@@ -14,6 +14,7 @@ const currentDate = new Date(Date.now()).toISOString().split("T")[0];
     method="POST"
     accept-charset="utf-8"
     enctype="multipart/form-data"
+    id="form"
 >
     <label for="city">
         City
@@ -118,6 +119,12 @@ const currentDate = new Date(Date.now()).toISOString().split("T")[0];
                 finalLinkField.value = ticketLinkInput.value;
             }
         });
+    });
+
+    const form = document.getElementById("form");
+
+    form?.addEventListener("submit", () => {
+        alert("Thank you for your submission! It will be uploaded soon.");
     });
 </script>
 
