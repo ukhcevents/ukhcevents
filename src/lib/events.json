@@ -407,6 +407,17 @@
         "pub_date": "Tue, 25 Aug 2026 17:23:31 +0000"
     },
     {
+        "id": 30,
+        "city": "Manchester",
+        "title": "Wrongside Fest",
+        "date": "2026-10-31",
+        "venue": "Soup",
+        "description": "Deal With It, Hellbound, Imposter, Raw Nerve, Malignant Methods, Still In Love, Violent Offence, Attrition, Tear Away, Pain Killer plus more TBA.",
+        "link": "https://scopeshows.com/events/wrongside-fest-2026",
+        "image_url": "/src/assets/2026-10-31-wrongside-fest.webp",
+        "pub_date": "Mon, 07 Sep 2026 21:44:29 +0000"
+    },
+    {
         "id": 15,
         "city": "Bristol",
         "title": "The S.E.T",
@@ -460,5 +471,16 @@
         "link": "https://pit.live/events/moral-law",
         "image_url": "/src/assets/2026-11-23-Moral_Law.webp",
         "pub_date": "Thu, 21 May 2026 17:30:46 +0000"
+    },
+    {
+        "id": 31,
+        "city": "Leeds",
+        "title": "For The Children",
+        "date": "2026-11-28",
+        "venue": "Boom",
+        "description": "Higher Power, Hellbound, Malignant Methods, Mashaal, Rekrucify, Violent Offence, Brightside, Attrition, Brutal Image plus more TBA.",
+        "link": "https://boomleeds.seetickets.com/event/for-the-children/boom/3712232",
+        "image_url": "/src/assets/2026-11-28-for-the-children.webp",
+        "pub_date": "Mon, 07 Sep 2026 21:45:20 +0000"
     }
 ]
