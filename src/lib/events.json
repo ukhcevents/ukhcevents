@@ -374,6 +374,17 @@
         "pub_date": "Tue, 09 Jun 2026 12:40:37 +0000"
     },
     {
+        "id": 32,
+        "city": "Manchester",
+        "title": "Pest Control",
+        "date": "2026-10-29",
+        "venue": "Niamos",
+        "description": "Support from Cannonball, Nerve Agent and Painkiller.",
+        "link": "https://mchcpromos.bigcartel.com/product/mchc-pest-control-niamos-291026",
+        "image_url": "/src/assets/2026-10-29-pest-control.webp",
+        "pub_date": "Fri, 11 Sep 2026 16:49:44 +0000"
+    },
+    {
         "id": 25,
         "city": "Manchester",
         "title": "Withpaperwings",
