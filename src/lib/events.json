@@ -473,6 +473,17 @@
         "pub_date": "Thu, 05 Feb 2026 07:13:52 +0000"
     },
     {
+        "id": 33,
+        "city": "Coventry",
+        "title": "Asidhara",
+        "date": "2026-11-22",
+        "venue": "LTB",
+        "description": "Support from Ordeal, Nerve Agent and Target Man.",
+        "link": "https://lastbreathpromos.bigcartel.com/product/last-breath-03",
+        "image_url": "/src/assets/2026-11-22-asidhara.webp",
+        "pub_date": "Sat, 12 Sep 2026 08:50:43 +0000"
+    },
+    {
         "id": 12,
         "city": "London",
         "title": "Moral Law",
