@@ -5,7 +5,13 @@
 <header>
     <span><a href="/">UKHC Events</a></span>
     <div class="buttons">
-        <a id="search" href="/search" aria-label="search">
+        <a
+            id="search"
+            href="/search"
+            aria-label="search"
+            data-umami-event="search-icon-click"
+            data-umami-event-url={Astro.url.pathname}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -22,7 +28,13 @@
                 <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
             </svg>
         </a>
-        <a id="add" href="/add" aria-label="add event">
+        <a
+            id="add"
+            href="/add"
+            aria-label="add event"
+            data-umami-event="add-event-icon-click"
+            data-umami-event-url={Astro.url.pathname}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -39,7 +51,10 @@
                 <line x1="5" x2="19" y1="12" y2="12"></line>
             </svg>
         </a>
-        <button id="theme-switch"
+        <button
+            id="theme-switch"
+            data-umami-event="theme-toggle-click"
+            data-umami-event-url={Astro.url.pathname}
             ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -63,7 +78,11 @@
                 <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg
             ></button
         >
-        <button id="hamburger" aria-expanded="false"
+        <button
+            id="hamburger"
+            aria-expanded="false"
+            data-umami-event="menu-click"
+            data-umami-event-url={Astro.url.pathname}
             ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
