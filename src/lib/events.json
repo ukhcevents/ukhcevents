@@ -374,6 +374,17 @@
         "pub_date": "Tue, 09 Jun 2026 12:40:37 +0000"
     },
     {
+        "id": 34,
+        "city": "London",
+        "title": "Stout",
+        "date": "2026-10-25",
+        "venue": "Number 90 Lock",
+        "description": "Support from Special Move, Agency and Violent Offence.",
+        "link": "https://moraldecay.bigcartel.com/product/stout_special_move_returntolondon_night2",
+        "image_url": "/src/assets/2026-10-25-special-move.webp",
+        "pub_date": "Sun, 13 Sep 2026 21:15:00 +0000"
+    },
+    {
         "id": 32,
         "city": "Manchester",
         "title": "Pest Control",
