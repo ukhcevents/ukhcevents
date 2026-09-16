@@ -515,5 +515,16 @@
         "link": "https://boomleeds.seetickets.com/event/for-the-children/boom/3712232",
         "image_url": "/src/assets/2026-11-28-for-the-children.webp",
         "pub_date": "Mon, 07 Sep 2026 21:45:20 +0000"
+    },
+    {
+        "id": 35,
+        "city": "Birmingham",
+        "title": "Tempers Fray",
+        "date": "2026-11-28",
+        "venue": "Centrala",
+        "description": "Support from Not Without Punishment, Prozpekt, Headstone and Torn Apart.",
+        "link": "https://bhxpromotions.bigcartel.com/product/tempers-fray-sat28nov",
+        "image_url": "/src/assets/2026-11-28-tempers-fray.webp",
+        "pub_date": "Wed, 16 Sep 2026 10:11:40 +0000"
     }
 ]
