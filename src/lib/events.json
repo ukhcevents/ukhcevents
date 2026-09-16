@@ -440,6 +440,17 @@
         "pub_date": "Mon, 07 Sep 2026 21:44:29 +0000"
     },
     {
+        "id": 36,
+        "city": "London",
+        "title": "Hellbound",
+        "date": "2026-11-01",
+        "venue": "Dublin Castle",
+        "description": "Support from Imposter, Special Guests, Elicit and Offer No Pity.",
+        "link": "https://scopeshows.com/events/hellbound-and-imposter-matinee",
+        "image_url": "/src/assets/2026-11-01-hellbound.webp",
+        "pub_date": "Wed, 16 Sep 2026 13:25:08 +0000"
+    },
+    {
         "id": 15,
         "city": "Bristol",
         "title": "The S.E.T",
