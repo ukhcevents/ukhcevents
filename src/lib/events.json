@@ -396,6 +396,17 @@
         "pub_date": "Fri, 11 Sep 2026 16:49:44 +0000"
     },
     {
+        "id": 37,
+        "city": "Birmingham",
+        "title": "Regress",
+        "date": "2026-10-30",
+        "venue": "Centrala",
+        "description": "Support from Without Blood, Black Mould, Final Notice and Catapult.",
+        "link": "Doors",
+        "image_url": "/src/assets/2026-10-30-regress.webp",
+        "pub_date": "Fri, 18 Sep 2026 08:12:15 +0000"
+    },
+    {
         "id": 25,
         "city": "Manchester",
         "title": "Withpaperwings",
@@ -449,6 +460,17 @@
         "link": "https://scopeshows.com/events/hellbound-and-imposter-matinee",
         "image_url": "/src/assets/2026-11-01-hellbound.webp",
         "pub_date": "Wed, 16 Sep 2026 13:25:08 +0000"
+    },
+    {
+        "id": 38,
+        "city": "London",
+        "title": "Killing Me Softly",
+        "date": "2026-11-07",
+        "venue": "Chat's Palace",
+        "description": "Support from Bun Dem Out, No Relief, Unravel, Offer No Pity and Make Way.",
+        "link": "https://brokenremains.bigcartel.com/product/hardcore-in-the-palace-killing-me-softly-supports",
+        "image_url": "/src/assets/2026-11-07-killing-me-softly.webp",
+        "pub_date": "Fri, 18 Sep 2026 08:12:37 +0000"
     },
     {
         "id": 15,
