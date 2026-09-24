@@ -11,6 +11,17 @@
         "pub_date": "."
     },
     {
+        "id": -153,
+        "city": "Liverpool",
+        "title": ".",
+        "date": "1970-01-01",
+        "venue": ".",
+        "description": ".",
+        "link": ".",
+        "image_url": ".",
+        "pub_date": "."
+    },
+    {
         "id": -5,
         "city": "Nottingham",
         "title": ".....",
@@ -147,17 +158,6 @@
         "city": "Leicester",
         "title": "....",
         "date": "1970-01-04",
-        "venue": ".",
-        "description": ".",
-        "link": ".",
-        "image_url": ".",
-        "pub_date": "."
-    },
-    {
-        "id": -153,
-        "city": "Liverpool",
-        "title": ".",
-        "date": "1970-01-01",
         "venue": ".",
         "description": ".",
         "link": ".",
@@ -372,6 +372,17 @@
         "link": "https://scopeshows.com/events/mchc-kartel-aatma-04-10-26",
         "image_url": "/src/assets/2026-10-04-kartel.webp",
         "pub_date": "Sun, 06 Sep 2026 13:59:08 +0000"
+    },
+    {
+        "id": 39,
+        "city": "Liverpool",
+        "title": "Preemptive Strike",
+        "date": "2026-10-17",
+        "venue": "The Bronte",
+        "description": "Support from Reflex, Accusation, Make Way, Unravel and xTemplarx.",
+        "link": "Doors",
+        "image_url": "/src/assets/2026-10-17-preemptive-strike.webp",
+        "pub_date": "Thu, 24 Sep 2026 15:00:47 +0000"
     },
     {
         "id": 19,
