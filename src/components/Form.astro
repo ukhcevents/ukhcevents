@@ -9,13 +9,7 @@ const cities = [...new Set(events.map((e) => e.data.city))].sort();
 const currentDate = new Date(Date.now()).toISOString().split("T")[0];
 ---
 
-<form
-    action={formspree_url}
-    method="POST"
-    accept-charset="utf-8"
-    enctype="multipart/form-data"
-    id="form"
->
+<form action={formspree_url} method="POST" accept-charset="utf-8" id="form">
     <label for="city">
         City
         <select name="city" id="city" required>
@@ -74,11 +68,6 @@ const currentDate = new Date(Date.now()).toISOString().split("T")[0];
     </fieldset>
 
     <input type="hidden" name="link" id="final-link" />
-
-    <label for="image" class="file-upload">
-        Upload Flyer
-        <input type="file" id="image" name="image" accept="image/*" required />
-    </label>
 
     <p>If your city is missing, email <strong>ukhcevents@proton.me</strong>.</p>
 
@@ -167,10 +156,6 @@ const currentDate = new Date(Date.now()).toISOString().split("T")[0];
         border: 1px solid var(--bg1);
     }
 
-    /* input[type="file"] {
-        display: none;
-    } */
-
     input[type="date"] {
         font-family: inherit;
     }
@@ -197,18 +182,5 @@ const currentDate = new Date(Date.now()).toISOString().split("T")[0];
 
     .radio-item input[type="url"] {
         width: 100%;
-    }
-
-    /* .image-upload {
-        display: block;
-        border: 1px solid var(--fg0);
-        padding: 0.6em 0.75rem;
-        margin: 1rem 0;
-        cursor: pointer;
-    } */
-
-    .file-upload {
-        display: block;
-        margin: 1rem 0;
     }
 </style>
