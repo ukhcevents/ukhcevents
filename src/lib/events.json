@@ -407,6 +407,17 @@
         "pub_date": "Sun, 13 Sep 2026 21:15:00 +0000"
     },
     {
+        "id": 41,
+        "city": "Glasgow",
+        "title": "Pest Control",
+        "date": "2026-10-28",
+        "venue": "Nice N Sleazy",
+        "description": "Support from Hellbound, Imposter, Knome and Heads On Pikes.",
+        "link": "https://shop.northernunrest.com/product/pest-control",
+        "image_url": "/src/assets/2026-10-28-pest-control.webp",
+        "pub_date": "Sun, 11 Oct 2026 09:38:59 +0000"
+    },
+    {
         "id": 32,
         "city": "Manchester",
         "title": "Pest Control",
@@ -581,5 +592,16 @@
         "link": "https://bhxpromotions.bigcartel.com/product/tempers-fray-sat28nov",
         "image_url": "/src/assets/2026-11-28-tempers-fray.webp",
         "pub_date": "Wed, 16 Sep 2026 10:11:40 +0000"
+    },
+    {
+        "id": 40,
+        "city": "Glasgow",
+        "title": "Pain Of Truth",
+        "date": "2027-02-17",
+        "venue": "Slay",
+        "description": "Support from Big Boy, Headbussa and Impunity.",
+        "link": "https://shop.northernunrest.com/product/POT",
+        "image_url": "/src/assets/2027-02-17-pain-of-truth.webp",
+        "pub_date": "Sun, 11 Oct 2026 09:38:29 +0000"
     }
 ]
