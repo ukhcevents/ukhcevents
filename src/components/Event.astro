@@ -28,11 +28,17 @@ if (!images[image])
 
 const hasTicketUrl =
     ticket_link && ticket_link !== "Free" && ticket_link !== "Doors";
+console.log(Object.keys(Astro.props), city);
 ---
 
 {
     hasTicketUrl ? (
-        <a class="event" href={ticket_link} target="_blank">
+        <a
+            class="event"
+            href={ticket_link}
+            target="_blank"
+            data-umami-event-url={`${title.replaceAll(" ", "-")}-${date}-${city}`}
+        >
             <div class="image-container">
                 <Image
                     src={images[image]()}

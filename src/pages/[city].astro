@@ -44,6 +44,7 @@ const { cityName, events } = Astro.props;
                         ticket_link={event.data.link}
                         image={event.data.image_url}
                         date={event.data.date}
+                        city={cityName}
                     />
                 ))}
             </div>

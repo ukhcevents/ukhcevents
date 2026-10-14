@@ -572,6 +572,17 @@
         "pub_date": "Thu, 21 May 2026 17:30:46 +0000"
     },
     {
+        "id": 42,
+        "city": "London",
+        "title": "Demonstration Of Power",
+        "date": "2026-11-25",
+        "venue": "New River Studios",
+        "description": "Support from Exit Life, Life Of One and Violent Offence.",
+        "link": "https://pit.live/events/demonstration-of-power",
+        "image_url": "/src/assets/2026-11-25-demonstration-of-power.webp",
+        "pub_date": "Wed, 14 Oct 2026 19:01:30 +0000"
+    },
+    {
         "id": 31,
         "city": "Leeds",
         "title": "For The Children",
