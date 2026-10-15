@@ -680,5 +680,16 @@
         "link": "https://mchcpromos.bigcartel.com/product/mchc-demonstration-of-power-the-bread-shed-291126",
         "image_url": "/src/assets/2026-11-29-demonstration-of-power.webp",
         "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
+    },
+    {
+        "id": 49,
+        "city": "Edinburgh",
+        "title": "EHHC All Dayer",
+        "date": "2027-01-09",
+        "venue": "Wee Red Bar",
+        "description": "Premonition, Broken Ankles, Bloodsport, No One Wins, Telltale, Heads On Pikes, Turn Your Back, No Known Weakness, Lights Out, Shot Down In May.",
+        "link": "https://ehhc.bigcartel.com/product/ehhc-all-dayer-3",
+        "image_url": "/src/assets/2027-01-09-ehhc-all-dayer.webp",
+        "pub_date": "Wed, 15 Oct 2026 07:02:30 +0000"
     }
 ]
