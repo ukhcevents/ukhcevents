@@ -588,7 +588,7 @@
         "title": "For The Children",
         "date": "2026-11-28",
         "venue": "Boom",
-        "description": "Higher Power, Hellbound, Malignant Methods, Mashaal, Rekrucify, Violent Offence, Brightside, Attrition, Brutal Image plus more TBA.",
+        "description": "Higher Power, Demonstration Of Power, Hellbound, Malignant Methods, Exit Life, Mashaal, Rekrucify, Violent Offence, Brightside, Attrition, Brutal Image.",
         "link": "https://boomleeds.seetickets.com/event/for-the-children/boom/3712232",
         "image_url": "/src/assets/2026-11-28-for-the-children.webp",
         "pub_date": "Mon, 07 Sep 2026 21:45:20 +0000"
@@ -614,5 +614,71 @@
         "link": "https://shop.northernunrest.com/product/POT",
         "image_url": "/src/assets/2027-02-17-pain-of-truth.webp",
         "pub_date": "Sun, 11 Oct 2026 09:38:29 +0000"
+    },
+    {
+        "id": 43,
+        "city": "Edinburgh",
+        "title": "Demonstration Of Power",
+        "date": "2026-11-22",
+        "venue": "Summerhall Main Hall",
+        "description": "Support from Exit Life, Dissent and Bloodsport.",
+        "link": "https://ehhc.bigcartel.com/product/demonstartion-of-power-22nd-november",
+        "image_url": "/src/assets/2026-11-22-demonstration-of-power.webp",
+        "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
+    },
+    {
+        "id": 44,
+        "city": "Liverpool",
+        "title": "Demonstration Of Power",
+        "date": "2026-11-23",
+        "venue": "Quarry",
+        "description": "Support from Exit Life, Wits End, Powermove and Everyone Bleeds.",
+        "link": "https://counterculturerecords.bigcartel.com/product/l1hc-55-demonstration-of-powerexit-life-supports",
+        "image_url": "/src/assets/2026-11-23-demonstration-of-power.webp",
+        "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
+    },
+    {
+        "id": 45,
+        "city": "Brighton",
+        "title": "Demonstration Of Power",
+        "date": "2026-11-24",
+        "venue": "Hope & Ruin",
+        "description": "Support from Imposter, Exit Life and Violaine.",
+        "link": "https://burningwater.bigcartel.com/product/demonstration-of-power-brighton",
+        "image_url": "/src/assets/2026-11-24-demonstration-of-power.webp",
+        "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
+    },
+    {
+        "id": 46,
+        "city": "Birmingham",
+        "title": "Demonstration Of Power",
+        "date": "2026-11-26",
+        "venue": "Muthers",
+        "description": "Support from Exit Life, Impunity and Impermanent.",
+        "link": "https://rulethemout.bigcartel.com/",
+        "image_url": "/src/assets/2026-11-26-demonstration-of-power.webp",
+        "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
+    },
+    {
+        "id": 47,
+        "city": "Sheffield",
+        "title": "Demonstration Of Power",
+        "date": "2026-11-27",
+        "venue": "",
+        "description": "Support from Exit Life, Rekrucify, Telltale and Dysthymia.",
+        "link": "https://www.busybodiessheffield.com/product/dop-271126",
+        "image_url": "/src/assets/2026-11-27-demonstration-of-power.webp",
+        "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
+    },
+    {
+        "id": 48,
+        "city": "Manchester",
+        "title": "Demonstration Of Power",
+        "date": "2026-11-29",
+        "venue": "",
+        "description": "Support from Exit Life, Violent Offence, Telltale and Elicit.",
+        "link": "https://mchcpromos.bigcartel.com/product/mchc-demonstration-of-power-the-bread-shed-291126",
+        "image_url": "/src/assets/2026-11-29-demonstration-of-power.webp",
+        "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
     }
 ]
