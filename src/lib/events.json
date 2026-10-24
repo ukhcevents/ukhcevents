@@ -697,10 +697,54 @@
         "city": "Birmingham",
         "title": "Haywire",
         "date": "2027-01-08",
-        "venue": "Castle& Falcon",
+        "venue": "Castle & Falcon",
         "description": "Support TBA.",
         "link": "https://scopeshows.com/events/haywire-2027",
         "image_url": "/src/assets/2027-01-08-haywire.webp",
+        "pub_date": "Sat, 24 Oct 2026 08:34:08 +0000"
+    },
+    {
+        "id": 53,
+        "city": "Leeds",
+        "title": "Haywire",
+        "date": "2027-01-07",
+        "venue": "Brudenell Social Club",
+        "description": "Support TBA.",
+        "link": "https://scopeshows.com/events/haywire-live-in-leeds",
+        "image_url": "/src/assets/2027-01-07-haywire.webp",
+        "pub_date": "Sat, 24 Oct 2026 08:34:08 +0000"
+    },
+    {
+        "id": 54,
+        "city": "Nottingham",
+        "title": "Haywire",
+        "date": "2027-01-03",
+        "venue": "Greyfriars Social Club",
+        "description": "Support TBA.",
+        "link": "https://scopeshows.com/events/haywire-and-supports-greyfriars-social-club-nottingham",
+        "image_url": "/src/assets/2027-01-03-haywire.webp",
+        "pub_date": "Sat, 24 Oct 2026 08:34:08 +0000"
+    },
+    {
+        "id": 55,
+        "city": "London",
+        "title": "Haywire",
+        "date": "2027-01-10",
+        "venue": "The Garage",
+        "description": "Support TBA.",
+        "link": "https://scopeshows.com/events/haywire-in-the-garage",
+        "image_url": "/src/assets/2027-01-10-haywire.webp",
+        "pub_date": "Sat, 24 Oct 2026 08:34:08 +0000"
+    },
+    {
+        "id": 56,
+        "city": "Newport",
+        "title": "Haywire",
+        "date": "2027-01-09",
+        "venue": "Corn Exchange",
+        "description": "Support TBA.",
+        "link": "https://scopeshows.com/events/haywire-corn-exchange-newport",
+        "image_url": "/src/assets/2027-01-09-haywire.webp",
         "pub_date": "Sat, 24 Oct 2026 08:34:08 +0000"
     },
     {
