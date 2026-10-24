@@ -528,6 +528,17 @@
         "pub_date": "Sun, 06 Sep 2026 15:58:12 +0000"
     },
     {
+        "id": 52,
+        "city": "Brighton",
+        "title": "Cosmic Joke",
+        "date": "2026-11-15",
+        "venue": "Daltons",
+        "description": "Support from Bad Beat, Backh, Dambuster and Animal House.",
+        "link": "https://burningwater.bigcartel.com/product/cosmic-joke-bad-beat-brighton",
+        "image_url": "/src/assets/2026-11-15-cosmic-joke.webp",
+        "pub_date": "Sat, 24 Oct 2026 08:35:05 +0000"
+    },
+    {
         "id": 17,
         "city": "London",
         "title": "The S.E.T",
@@ -561,61 +572,6 @@
         "pub_date": "Sat, 12 Sep 2026 08:50:43 +0000"
     },
     {
-        "id": 12,
-        "city": "London",
-        "title": "Moral Law",
-        "date": "2026-11-23",
-        "venue": "New Cross Inn",
-        "description": "Support from xRebelx plus more TBA.",
-        "link": "https://pit.live/events/moral-law",
-        "image_url": "/src/assets/2026-11-23-Moral_Law.webp",
-        "pub_date": "Thu, 21 May 2026 17:30:46 +0000"
-    },
-    {
-        "id": 42,
-        "city": "London",
-        "title": "Demonstration Of Power",
-        "date": "2026-11-25",
-        "venue": "New River Studios",
-        "description": "Support from Exit Life, Life Of One and Violent Offence.",
-        "link": "https://pit.live/events/demonstration-of-power",
-        "image_url": "/src/assets/2026-11-25-demonstration-of-power.webp",
-        "pub_date": "Wed, 14 Oct 2026 19:01:30 +0000"
-    },
-    {
-        "id": 31,
-        "city": "Leeds",
-        "title": "For The Children",
-        "date": "2026-11-28",
-        "venue": "Boom",
-        "description": "Higher Power, Demonstration Of Power, Hellbound, Malignant Methods, Exit Life, Mashaal, Rekrucify, Violent Offence, Brightside, Attrition, Brutal Image.",
-        "link": "https://boomleeds.seetickets.com/event/for-the-children/boom/3712232",
-        "image_url": "/src/assets/2026-11-28-for-the-children.webp",
-        "pub_date": "Mon, 07 Sep 2026 21:45:20 +0000"
-    },
-    {
-        "id": 35,
-        "city": "Birmingham",
-        "title": "Tempers Fray",
-        "date": "2026-11-28",
-        "venue": "Centrala",
-        "description": "Support from Not Without Punishment, Prozpekt, Headstone and Torn Apart.",
-        "link": "https://bhxpromotions.bigcartel.com/product/tempers-fray-sat28nov",
-        "image_url": "/src/assets/2026-11-28-tempers-fray.webp",
-        "pub_date": "Wed, 16 Sep 2026 10:11:40 +0000"
-    },
-    {
-        "id": 40,
-        "city": "Glasgow",
-        "title": "Pain Of Truth",
-        "date": "2027-02-17",
-        "venue": "Slay",
-        "description": "Support from Big Boy, Headbussa and Impunity.",
-        "link": "https://shop.northernunrest.com/product/POT",
-        "image_url": "/src/assets/2027-02-17-pain-of-truth.webp",
-        "pub_date": "Sun, 11 Oct 2026 09:38:29 +0000"
-    },
-    {
         "id": 43,
         "city": "Edinburgh",
         "title": "Demonstration Of Power",
@@ -638,6 +594,17 @@
         "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
     },
     {
+        "id": 12,
+        "city": "London",
+        "title": "Moral Law",
+        "date": "2026-11-23",
+        "venue": "New Cross Inn",
+        "description": "Support from xRebelx plus more TBA.",
+        "link": "https://pit.live/events/moral-law",
+        "image_url": "/src/assets/2026-11-23-Moral_Law.webp",
+        "pub_date": "Thu, 21 May 2026 17:30:46 +0000"
+    },
+    {
         "id": 45,
         "city": "Brighton",
         "title": "Demonstration Of Power",
@@ -647,6 +614,17 @@
         "link": "https://burningwater.bigcartel.com/product/demonstration-of-power-brighton",
         "image_url": "/src/assets/2026-11-24-demonstration-of-power.webp",
         "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
+    },
+    {
+        "id": 42,
+        "city": "London",
+        "title": "Demonstration Of Power",
+        "date": "2026-11-25",
+        "venue": "New River Studios",
+        "description": "Support from Exit Life, Life Of One and Violent Offence.",
+        "link": "https://pit.live/events/demonstration-of-power",
+        "image_url": "/src/assets/2026-11-25-demonstration-of-power.webp",
+        "pub_date": "Wed, 14 Oct 2026 19:01:30 +0000"
     },
     {
         "id": 46,
@@ -671,6 +649,28 @@
         "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
     },
     {
+        "id": 31,
+        "city": "Leeds",
+        "title": "For The Children",
+        "date": "2026-11-28",
+        "venue": "Boom",
+        "description": "Higher Power, Demonstration Of Power, Hellbound, Malignant Methods, Exit Life, Mashaal, Rekrucify, Violent Offence, Brightside, Attrition, Brutal Image.",
+        "link": "https://boomleeds.seetickets.com/event/for-the-children/boom/3712232",
+        "image_url": "/src/assets/2026-11-28-for-the-children.webp",
+        "pub_date": "Mon, 07 Sep 2026 21:45:20 +0000"
+    },
+    {
+        "id": 35,
+        "city": "Birmingham",
+        "title": "Tempers Fray",
+        "date": "2026-11-28",
+        "venue": "Centrala",
+        "description": "Support from Not Without Punishment, Prozpekt, Headstone and Torn Apart.",
+        "link": "https://bhxpromotions.bigcartel.com/product/tempers-fray-sat28nov",
+        "image_url": "/src/assets/2026-11-28-tempers-fray.webp",
+        "pub_date": "Wed, 16 Sep 2026 10:11:40 +0000"
+    },
+    {
         "id": 48,
         "city": "Manchester",
         "title": "Demonstration Of Power",
@@ -682,6 +682,28 @@
         "pub_date": "Wed, 14 Oct 2026 21:45:04 +0000"
     },
     {
+        "id": 51,
+        "city": "Manchester",
+        "title": "Haywire",
+        "date": "2027-01-04",
+        "venue": "Rebellion",
+        "description": "Support TBA.",
+        "link": "https://scopeshows.com/events/haywire",
+        "image_url": "/src/assets/2027-01-04-haywire.webp",
+        "pub_date": "Sat, 24 Oct 2026 08:34:37 +0000"
+    },
+    {
+        "id": 50,
+        "city": "Birmingham",
+        "title": "Haywire",
+        "date": "2027-01-08",
+        "venue": "Castle& Falcon",
+        "description": "Support TBA.",
+        "link": "https://scopeshows.com/events/haywire-2027",
+        "image_url": "/src/assets/2027-01-08-haywire.webp",
+        "pub_date": "Sat, 24 Oct 2026 08:34:08 +0000"
+    },
+    {
         "id": 49,
         "city": "Edinburgh",
         "title": "EHHC All Dayer",
@@ -691,5 +713,16 @@
         "link": "https://ehhc.bigcartel.com/product/ehhc-all-dayer-3",
         "image_url": "/src/assets/2027-01-09-ehhc-all-dayer.webp",
         "pub_date": "Wed, 15 Oct 2026 07:02:30 +0000"
+    },
+    {
+        "id": 40,
+        "city": "Glasgow",
+        "title": "Pain Of Truth",
+        "date": "2027-02-17",
+        "venue": "Slay",
+        "description": "Support from Big Boy, Headbussa and Impunity.",
+        "link": "https://shop.northernunrest.com/product/POT",
+        "image_url": "/src/assets/2027-02-17-pain-of-truth.webp",
+        "pub_date": "Sun, 11 Oct 2026 09:38:29 +0000"
     }
 ]
