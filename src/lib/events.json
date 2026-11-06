@@ -790,5 +790,16 @@
         "link": "https://shop.northernunrest.com/product/POT",
         "image_url": "/src/assets/2027-02-17-pain-of-truth.webp",
         "pub_date": "Sun, 11 Oct 2026 09:38:29 +0000"
+    },
+    {
+        "id": 59,
+        "city": "Birmingham",
+        "title": "Cauldron",
+        "date": "2026-12-19",
+        "venue": "Muthers",
+        "description": "Support from Cruelty, Malignant Methods and The April Situation.",
+        "link": "https://rulethemout.bigcartel.com/product/christmas-with-cauldron-cruelty",
+        "image_url": "/src/assets/2026-12-19-cauldron.webp",
+        "pub_date": "Fri, 06 Nov 2026 18:20:01 +0000"
     }
 ]
