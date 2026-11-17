@@ -1,9 +1,10 @@
 ---
-
 ---
 
 <header>
-    <span><a href="/">UKHC Events</a></span>
+    <span>
+        <a href="/">UKHC Events</a>
+    </span>
     <div class="buttons">
         <a
             id="search"
@@ -55,7 +56,8 @@
             id="theme-switch"
             data-umami-event="theme-toggle-click"
             data-umami-event-url={Astro.url.pathname}
-            ><svg
+        >
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 width="24"
@@ -75,15 +77,17 @@
                 <line x1="1" x2="3" y1="12" y2="12"></line>
                 <line x1="21" x2="23" y1="12" y2="12"></line>
                 <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
-                <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg
-            ></button
-        >
+                <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+            </svg>
+        </button>
         <button
             id="hamburger"
             aria-expanded="false"
+            aria-controls="nav"
             data-umami-event="menu-click"
             data-umami-event-url={Astro.url.pathname}
-            ><svg
+        >
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 width="24"
@@ -98,8 +102,8 @@
                 <line id="middle-line" x1="3" x2="21" y1="12" y2="12"></line>
                 <line id="top-line" x1="3" x2="21" y1="6" y2="6"></line>
                 <line id="bottom-line" x1="3" x2="21" y1="18" y2="18"></line>
-            </svg></button
-        >
+            </svg>
+        </button>
     </div>
 </header>
 
@@ -158,9 +162,4 @@
         const theme = root.classList.contains("light") ? "light" : "dark";
         localStorage.setItem("theme", theme);
     });
-
-    // const retrievedTheme = localStorage.getItem("theme");
-    // if (retrievedTheme === "light") {
-    //     root.classList.add("light");
-    // }
 </script>

@@ -801,5 +801,16 @@
         "link": "https://rulethemout.bigcartel.com/product/christmas-with-cauldron-cruelty",
         "image_url": "/src/assets/2026-12-19-cauldron.webp",
         "pub_date": "Fri, 06 Nov 2026 18:20:01 +0000"
+    },
+    {
+        "id": 60,
+        "city": "Manchester",
+        "title": "Broken Oath",
+        "date": "2026-12-19",
+        "venue": "The White Hotel",
+        "description": "Support from Bathed In Sin, Heads On Pikes, Euthanize and Everyone Bleeds.",
+        "link": "https://mchcpromos.bigcartel.com/product/mchc-broken-oath-the-white-hotel-19122026",
+        "image_url": "/src/assets/2026-12-19-broken-oath.webp",
+        "pub_date": "Fri, 17 Nov 2026 19:20:01 +0000"
     }
 ]

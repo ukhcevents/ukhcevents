@@ -10,21 +10,24 @@ interface Props {
 const { city } = Astro.props;
 ---
 
-<html>
+<html lang="en">
     <head>
         <script
             defer
             src="https://cloud.umami.is/script.js"
-            data-website-id="de8490e5-0f92-4093-b935-767cac616826"></script>
+            data-website-id="de8490e5-0f92-4093-b935-767cac616826"
+        ></script>
         <title>{city ? `${city} - UKHC Events` : "UKHC Events"}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
             rel="alternate"
             type="application/rss+xml"
             title="Feed - UKHC Events"
-            href={city && city != "Add Event" && city != "Search"
-                ? `/${city.toLowerCase()}/rss.xml`
-                : "/rss.xml"}
+            href={
+                city && city != "Add Event" && city != "Search"
+                    ? `/${city.toLowerCase()}/rss.xml`
+                    : "/rss.xml"
+            }
         />
         <script is:inline>
             const retrievedTheme = localStorage.getItem("theme");

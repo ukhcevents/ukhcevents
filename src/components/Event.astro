@@ -30,60 +30,58 @@ const hasTicketUrl =
     ticket_link && ticket_link !== "Free" && ticket_link !== "Doors";
 ---
 
-{
-    hasTicketUrl ? (
-        <a
-            class="event"
-            href={ticket_link}
-            target="_blank"
-            data-umami-event-url={`${title.replaceAll(" ", "-")}-${date}-${city}`}
-        >
-            <div class="image-container">
-                <Image
-                    src={images[image]()}
-                    alt={`flyer for ${title}`}
-                    height="250"
-                    loading="eager"
-                />
-            </div>
-            <h2 class="title">{title}</h2>
-            <strong>{formattedDate}</strong>
-            <p>{description}</p>
-            <p>
-                <strong>Venue: </strong> {venue}
-                {city ? `, ${city}` : ""}
-            </p>
-            <p>Click for tickets.</p>
-        </a>
-    ) : (
-        <div class="event">
-            <div class="image-container">
-                <Image
-                    src={images[image]()}
-                    alt={`flyer for ${title}`}
-                    height="250"
-                    loading="eager"
-                />
-            </div>
-            <h2 class="title">{title}</h2>
-            <strong>{formattedDate}</strong>
-            <p>{description}</p>
-            <p>
-                <strong>Venue: </strong> {venue}
-                {city ? `, ${city}` : ""}
-            </p>
-            <p class="highlight">
-                {!ticket_link ? (
-                    "No ticket information available."
-                ) : ticket_link === "Free" ? (
-                    <span class="free">Free show.</span>
-                ) : (
-                    <span class="doors">Tickets on the door.</span>
-                )}
-            </p>
+{hasTicketUrl ? (
+    <a
+        class="event"
+        href={ticket_link}
+        target="_blank"
+        data-umami-event-url={`${title.replaceAll(" ", "-")}-${date}-${city}`}
+    >
+        <div class="image-container">
+            <Image
+                src={images[image]()}
+                alt={`flyer for ${title}`}
+                height="250"
+                loading="lazy"
+            />
         </div>
-    )
-}
+        <h2 class="title">{title}</h2>
+        <strong>{formattedDate}</strong>
+        <p>{description}</p>
+        <p>
+            <strong>Venue: </strong> {venue}
+            {city ? `, ${city}` : ""}
+        </p>
+        <p>Click for tickets.</p>
+    </a>
+) : (
+    <div class="event">
+        <div class="image-container">
+            <Image
+                src={images[image]()}
+                alt={`flyer for ${title}`}
+                height="250"
+                loading="lazy"
+            />
+        </div>
+        <h2 class="title">{title}</h2>
+        <strong>{formattedDate}</strong>
+        <p>{description}</p>
+        <p>
+            <strong>Venue: </strong> {venue}
+            {city ? `, ${city}` : ""}
+        </p>
+        <p class="highlight">
+            {!ticket_link ? (
+                "No ticket information available."
+            ) : ticket_link === "Free" ? (
+                <span class="free">Free show.</span>
+            ) : (
+                <span class="doors">Tickets on the door.</span>
+            )}
+        </p>
+    </div>
+)}
 <style>
     a {
         text-decoration: none;

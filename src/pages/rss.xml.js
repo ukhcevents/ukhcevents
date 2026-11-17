@@ -13,7 +13,7 @@ export async function GET(context) {
     return rss({
         title: 'UKHC Events',
         description: 'Upcoming UKHC Events.',
-        site: 'https://localhost:4321',
+        site: context.site,
         items: events.map((event) => ({
             city: event.data.city,
             title: event.data.title,
