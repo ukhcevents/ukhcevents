@@ -812,5 +812,16 @@
         "link": "https://mchcpromos.bigcartel.com/product/mchc-broken-oath-the-white-hotel-19122026",
         "image_url": "/src/assets/2026-12-19-broken-oath.webp",
         "pub_date": "Fri, 17 Nov 2026 19:20:01 +0000"
+    },
+    {
+        "id": 61,
+        "city": "Southampton",
+        "title": "Realm Of Torment",
+        "date": "2027-02-13",
+        "venue": "Edmund Kell Unitarian",
+        "description": "Support from Emancipation, Concrete Jungle and Tapped Out.",
+        "link": "https://pistolwhip.bigcartel.com/product/realm-of-torment-130227",
+        "image_url": "/src/assets/2027-02-13-realm-of-torment.webp",
+        "pub_date": "Sat, 21 Nov 2026 21:21:46 +0000"
     }
 ]

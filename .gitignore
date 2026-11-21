@@ -22,3 +22,4 @@ pnpm-debug.log*
 formspree_export.json
 db-to-json.py
 sync_events.py
+add_event.py
